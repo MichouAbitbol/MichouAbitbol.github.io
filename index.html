@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Page personnelle de Mattias Ferreira--Filoramo - Géomètre algébriste" />
+    <meta name="description" content="Personal webpage of Mattias Ferreira--Filoramo - PhD Candidate in Algebraic Geometry" />
     <meta name="author" content="Mattias Ferreira--Filoramo" />
-    <title>Mattias Ferreira--Filoramo | Géométrie Algébrique</title>
+    <title>Mattias Ferreira--Filoramo | Algebraic Geometry</title>
     
-    <link rel="icon" type="image/jpeg" href="Images/logo.jpeg">
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
     
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -31,6 +31,19 @@
             background-color: #2c3e50; 
             text-transform: uppercase;
             font-weight: 700;
+        }
+        /* Ouverture du volet déroulant au survol sur le nom en haut à gauche */
+        .navbar .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+        /* Suppression du petit triangle à côté du nom */
+        .navbar-brand.dropdown-toggle::after {
+            display: none !important;
+        }
+        .dropdown-menu {
+            text-transform: none;
+            font-weight: 400;
         }
         .masthead { 
             padding-top: calc(var(--nav-height) + 3rem); 
@@ -79,16 +92,28 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand text-white" href="#page-top">Mattias Ferreira--Filoramo</a>
+            <!-- Nom en haut à gauche : le clic fait remonter en haut, le survol affiche le menu -->
+            <div class="dropdown">
+                <a class="navbar-brand text-white dropdown-toggle me-0" href="#page-top" id="nameDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+                    Mattias Ferreira--Filoramo
+                </a>
+                <ul class="dropdown-menu shadow" aria-labelledby="nameDropdown">
+                    <li><a class="dropdown-item active" href="index.html"><i class="fas fa-square-root-variable me-2 text-primary"></i> Mathematics Page</a></li>
+                    <li><a class="dropdown-item" href="travels.html"><i class="fas fa-plane me-2 text-success"></i> Travels Page</a></li>
+                </ul>
+            </div>
+
             <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
                 Menu <i class="fas fa-bars"></i>
             </button>
+
+            <!-- Liens de navigation à droite -->
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded text-white" href="#about">Présentation</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded text-white" href="#research">Recherche & Publications</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded text-white" href="#talks">Exposés & Événements</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded text-white" href="#teaching">Enseignement</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded text-white" href="#about">About me</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded text-white" href="#research">Research & Publications</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded text-white" href="#talks">Talks & Events</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded text-white" href="#teaching">Teaching</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded text-white" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -108,7 +133,7 @@
                 <div class="divider-custom-line"></div>
             </div>
             
-            <p class="masthead-subheading font-weight-light mb-0">Doctorant en Géométrie Algébrique</p>
+            <p class="masthead-subheading font-weight-light mb-0">PhD student in Algebraic Geometry</p>
             
             <div class="text-center mt-4">
                 <p class="lead mb-0">Sorbonne Université &bull; Institut de Mathématiques de Jussieu - Paris Rive Gauche (IMJ-PRG)</p>
@@ -116,7 +141,7 @@
 
             <div class="text-center mt-3">
                 <a class="btn btn-outline-light me-2" href="https://arxiv.org/" target="_blank">
-                    <i class="fas fa-scroll me-2"></i> Page arXiv
+                    <i class="fas fa-scroll me-2"></i> ArXiv
                 </a>
                 <a class="btn btn-outline-light" href="#contact">
                     <i class="fas fa-envelope me-2"></i> Contact
@@ -130,17 +155,17 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <h2 class="section-title">Présentation</h2>
+                    <h2 class="section-title">About me</h2>
                     <div class="divider-custom">
                         <div class="divider-custom-line"></div>
                         <div class="divider-custom-icon"><i class="fas fa-user-academic"></i></div>
                         <div class="divider-custom-line"></div>
                     </div>
                     <p class="lead">
-                        Je suis doctorant en mathématiques au sein de l'équipe de Géométrie Algébrique de l'IMJ-PRG. 
+                        PhD Student in Algebraic Geometry | Berkovich Spaces & Non-Archimedean Geometry
                     </p>
                     <p>
-                        J'effectue ma thèse sous la direction d'Antoine Ducros. Mes travaux de recherche portent sur la géométrie analytique non-archimédienne (notamment les espaces de Berkovich), l'aplatissement local et l'étude des familles plates de variétés algébriques.
+                        Currently a PhD student in algebraic geometry at IMJ-PRG under the supervision of Antoine Ducros, my mathematical research centers on non-archimedean analytic geometry and Berkovich spaces. My work notably explores local flattening techniques and the structure of flat families of algebraic varieties.
                     </p>
                 </div>
             </div>
@@ -152,14 +177,14 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <h2 class="section-title">Recherche & Publications</h2>
+                    <h2 class="section-title">Research & Publications</h2>
                     <div class="divider-custom">
                         <div class="divider-custom-line"></div>
                         <div class="divider-custom-icon"><i class="fas fa-book-open"></i></div>
                         <div class="divider-custom-line"></div>
                     </div>
 
-                    <h3 class="h4 mb-3">Prépublications</h3>
+                    <h3 class="h4 mb-3">Preprints</h3>
                     
                     <!-- Premier article -->
                     <div class="paper-card">
@@ -167,7 +192,7 @@
                         <p class="text-muted mb-2"><em>Mattias Ferreira--Filoramo</em> (2026)</p>
                         <div class="mb-2">
                             <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#abstract1" aria-expanded="false" aria-controls="abstract1">
-                                <i class="fas fa-align-left me-1"></i> Résumé
+                                <i class="fas fa-align-left me-1"></i> Abstract
                             </button>
                             <a href="https://arxiv.org/" target="_blank" class="btn btn-sm btn-primary ms-1">
                                 <i class="fas fa-external-link-alt me-1"></i> On Hold
@@ -180,7 +205,7 @@
                         </div>
                     </div>
 
-                    <h3 class="h4 mb-3 mt-4">Autres tapuscrits</h3>
+                    <h3 class="h4 mb-3 mt-4">Other manuscripts</h3>
 
                     <!-- Thèse -->
                     <div class="paper-card">
@@ -188,10 +213,10 @@
                         <p class="text-muted mb-2"><em>Mattias Ferreira--Filoramo</em> (2026)</p>
                         <div class="mb-2">
                             <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#abstract2" aria-expanded="false" aria-controls="abstract2">
-                                <i class="fas fa-align-left me-1"></i> Résumé
+                                <i class="fas fa-align-left me-1"></i> Abstract
                             </button>
                             <a href="https://theses.fr/s383671" target="_blank" class="btn btn-sm btn-outline-primary ms-1">
-                                <i class="fas fa-file-pdf me-1"></i> Voir la Thèse
+                                <i class="fas fa-file-pdf me-1"></i> Thesis
                             </a>
                         </div>
                         <div class="collapse mt-2" id="abstract2">
@@ -211,58 +236,58 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <h2 class="section-title">Exposés & Événements</h2>
+                    <h2 class="section-title">Talks & Events</h2>
                     <div class="divider-custom">
                         <div class="divider-custom-line"></div>
                         <div class="divider-custom-icon"><i class="fas fa-chalkboard-teacher"></i></div>
                         <div class="divider-custom-line"></div>
                     </div>
 
-                    <h3 class="h4 mb-3">Exposés récents</h3>
+                    <h3 class="h4 mb-3">Recent Talks</h3>
                     <ul class="list-group list-group-flush mb-4 shadow-sm rounded">
                         <li class="list-group-item py-3">
-                            <strong>Flattening techniques in non-archimedean geometry</strong> — <small class="text-muted">09 Juin 2026</small><br>
+                            <strong>Flattening techniques in non-archimedean geometry</strong> — <small class="text-muted">09 June 2026</small><br>
                             <span class="text-muted small">Special Seminar, Universität Regensburg</span>
                         </li>
                         <li class="list-group-item py-3">
-                            <strong>From complex geometry to analytic spaces</strong> — <small class="text-muted">21 Mai 2026</small><br>
+                            <strong>From complex geometry to analytic spaces</strong> — <small class="text-muted">21 May 2026</small><br>
                             <span class="text-muted small">Junior Algebraic geometry Warwick Seminar (JAWS), University of Warwick</span>
                         </li>
                         <li class="list-group-item py-3">
-                            <strong>Espaces de Berkovich</strong> — <small class="text-muted">24 Avril 2026</small><br>
+                            <strong>Espaces de Berkovich</strong> — <small class="text-muted">24 April 2026</small><br>
                             <span class="text-muted small">Séminaire doctorants, Laboratoire de mathématiques de Besançon</span>
                         </li>
                         <li class="list-group-item py-3">
-                            <strong>Affine and projective Berkovich spaces</strong> — <small class="text-muted">1 Avril 2026</small><br>
+                            <strong>Affine and projective Berkovich spaces</strong> — <small class="text-muted">1 April 2026</small><br>
                             <span class="text-muted small">Working group on the analytification, tropicalization and compactification of character varieties; Second year: Bruhat-Tits buildings and Berkovich spaces.</span>
                         </li>
                         <li class="list-group-item py-3">
-                            <strong>From complex geometry to analytic spaces</strong> — <small class="text-muted">21 Janvier 2026</small><br>
+                            <strong>From complex geometry to analytic spaces</strong> — <small class="text-muted">21 January 2026</small><br>
                             <span class="text-muted small">Quid Seminar, Université de Toulouse</span>
                         </li>
                         <li class="list-group-item py-3">
-                            <strong>Flattening methods in non-archimedean geometry</strong> — <small class="text-muted">09 Octobre 2025</small><br>
+                            <strong>Flattening methods in non-archimedean geometry</strong> — <small class="text-muted">09 October 2025</small><br>
                             <span class="text-muted small">Non-Archimedean geometry, Université de Lille</span>
                         </li>
                         <li class="list-group-item py-3">
-                            <strong>From complex geometry to analytic spaces</strong> — <small class="text-muted">11 Juin 2025</small><br>
+                            <strong>From complex geometry to analytic spaces</strong> — <small class="text-muted">11 June 2025</small><br>
                             <span class="text-muted small">Séminaire doctorants, Université de Dijon</span>
                         </li>
                         <li class="list-group-item py-3">
-                            <strong>Espaces analytiques de Berkovich</strong> — <small class="text-muted">30 Avril 2024</small><br>
+                            <strong>Espaces analytiques de Berkovich</strong> — <small class="text-muted">30 April 2024</small><br>
                             <span class="text-muted small">Groupe de travail sur les analytifications, tropicalisations et compactifications de variétés des caractères</span>
                         </li>
                         <li class="list-group-item py-3">
-                            <strong>Passage to Stacks</strong> — <small class="text-muted">21 décembre 2023</small><br>
+                            <strong>Passage to Stacks</strong> — <small class="text-muted">21 December 2023</small><br>
                             <span class="text-muted small">Séminaire des doctorants, IMJ-PRG</span>
                         </li>
                         <li class="list-group-item py-3">
-                            <strong>Espaces de Berkovich et aplatissement</strong> — <small class="text-muted">13 juin 2023</small><br>
+                            <strong>Espaces de Berkovich et aplatissement</strong> — <small class="text-muted">13 June 2023</small><br>
                             <span class="text-muted small">Groupe de travail, IMJ-PRG</span>
                         </li>
                     </ul>
 
-                    <h3 class="h4 mb-3">Organisation</h3>
+                    <h3 class="h4 mb-3">Organization</h3>
                     <ul class="list-group list-group-flush mb-4 shadow-sm rounded">
                         <li class="list-group-item py-3">
                             <a href="https://ahgt.math.cnrs.fr/activities/#young-researchers-workshops" target="_blank" class="text-decoration-none fw-bold">
@@ -271,7 +296,7 @@
                         </li>
                     </ul>
 
-                    <h3 class="h4 mb-3">Conférences et ateliers</h3>
+                    <h3 class="h4 mb-3">Conferences and Workshops</h3>
                     <ul class="list-group list-group-flush mb-4 shadow-sm rounded">
                         <li class="list-group-item py-3">
                             <div class="d-flex justify-content-between align-items-start">
@@ -286,7 +311,7 @@
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
                                     <a href="https://www.mathconf.org/nag2025" target="_blank" class="text-decoration-none fw-bold">Non-Archimedean geometry</a>
-                                    <span class="text-muted small">(Conférence)</span>
+                                    <span class="text-muted small">(Conference)</span>
                                 </div>
                                 <span class="badge bg-light text-dark border ms-2">2025 &bull; Lille</span>
                             </div>
@@ -295,7 +320,7 @@
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
                                     <a href="https://www.lebesgue.fr/en/node/4968" target="_blank" class="text-decoration-none fw-bold">Singularities in Algebraic Geometry</a>
-                                    <span class="text-muted small">(Conférence)</span>
+                                    <span class="text-muted small">(Conference)</span>
                                 </div>
                                 <span class="badge bg-light text-dark border ms-2">2025 &bull; Rennes</span>
                             </div>
@@ -304,7 +329,7 @@
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
                                     <a href="https://impa.br/eventos-do-impa/2025-2/combinatorial-synergies-in-geometry-and-number-theory/" target="_blank" class="text-decoration-none fw-bold">Combinatorial Synergies in Geometry and Number Theory</a>
-                                    <span class="text-muted small">(Conférence)</span>
+                                    <span class="text-muted small">(Conference)</span>
                                 </div>
                                 <span class="badge bg-light text-dark border ms-2">2025 &bull; Rio de Janeiro</span>
                             </div>
@@ -313,7 +338,7 @@
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
                                     <a href="https://sites.google.com/view/resolution-in-caen-2025/home" target="_blank" class="text-decoration-none fw-bold">Non-Archimedean Geometry, Birational Geometry, and Resolution of Singularities</a>
-                                    <span class="text-muted small">(Conférence)</span>
+                                    <span class="text-muted small">(Conference)</span>
                                 </div>
                                 <span class="badge bg-light text-dark border ms-2">2025 &bull; Caen</span>
                             </div>
@@ -322,7 +347,7 @@
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
                                     <a href="https://conferences.cirm-math.fr/3267.html" target="_blank" class="text-decoration-none fw-bold">Logarithmic and non-archimedean methods in singularity theory</a>
-                                    <span class="text-muted small">(Conférence)</span>
+                                    <span class="text-muted small">(Conference)</span>
                                 </div>
                                 <span class="badge bg-light text-dark border ms-2">2025 &bull; CIRM</span>
                             </div>
@@ -340,7 +365,7 @@
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
                                     <a href="https://math.uniandes.edu.co/eventos/2024/trop/" target="_blank" class="text-decoration-none fw-bold">Colombian Encounter of Tropical and Non-archimedean Geometry</a>
-                                    <span class="text-muted small">(Conférence)</span>
+                                    <span class="text-muted small">(Conference)</span>
                                 </div>
                                 <span class="badge bg-light text-dark border ms-2">2024 &bull; Bogota</span>
                             </div>
@@ -349,7 +374,7 @@
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
                                     <a href="https://sfb-higher-invariants.app.uni-regensburg.de/index.php?title=Non-Archimedean_and_Tropical_Geometry" target="_blank" class="text-decoration-none fw-bold">Regensburg days on non-archimedean geometry</a>
-                                    <span class="text-muted small">(Conférence)</span>
+                                    <span class="text-muted small">(Conference)</span>
                                 </div>
                                 <span class="badge bg-light text-dark border ms-2">2024 &bull; Regensburg</span>
                             </div>
@@ -385,7 +410,7 @@
                             <div class="d-flex justify-content-between align-items-start">
                                 <div>
                                     <a href="https://sfb-higher-invariants.app.uni-regensburg.de/index.php?title=Regensburg_days_on_non-archimedean_geometry" target="_blank" class="text-decoration-none fw-bold">Regensburg days on non-archimedean geometry</a>
-                                    <span class="text-muted small">(Conférence)</span>
+                                    <span class="text-muted small">(Conference)</span>
                                 </div>
                                 <span class="badge bg-light text-dark border ms-2">2023 &bull; Regensburg</span>
                             </div>
@@ -437,7 +462,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <h2 class="section-title">Enseignement</h2>
+                    <h2 class="section-title">Teaching</h2>
                     <div class="divider-custom">
                         <div class="divider-custom-line"></div>
                         <div class="divider-custom-icon"><i class="fas fa-graduation-cap"></i></div>
@@ -478,26 +503,26 @@
                     <h4 class="text-uppercase mb-3">Contact</h4>
                     <p class="mb-0">
                         <i class="fas fa-envelope me-2"></i> mattias.ferreira-filoramo [at] imj-prg.fr<br>
-                        <i class="fas fa-building me-2"></i> Bureau 15-16-503
+                        <i class="fas fa-building me-2"></i> Office 15-16-503
                     </p>
                 </div>
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h4 class="text-uppercase mb-3">Adresse</h4>
+                    <h4 class="text-uppercase mb-3">Address</h4>
                     <p class="mb-0">
                         Sorbonne Université - Campus Pierre et Marie Curie<br>
-                        4, place Jussieu - Boite 247<br>
+                        4, place Jussieu - Box 247<br>
                         75252 Paris Cedex 05
                     </p>
                 </div>
                 <div class="col-lg-4">
-                    <h4 class="text-uppercase mb-3">Liens</h4>
+                    <h4 class="text-uppercase mb-3">Links</h4>
                     <a class="btn btn-outline-light btn-social mx-1" href="https://www.imj-prg.fr/" target="_blank" title="IMJ-PRG"><i class="fas fa-university"></i></a>
                     <a class="btn btn-outline-light btn-social mx-1" href="https://arxiv.org/" target="_blank" title="arXiv"><i class="fas fa-scroll"></i></a>
                 </div>
             </div>
         </div>
         <div class="copyright py-3 text-center text-white">
-            <div class="container"><small>© 2026 Mattias Ferreira--Filoramo | Géométrie Algébrique</small></div>
+            <div class="container"><small>© 2026 Mattias Ferreira--Filoramo | Algebraic Geometry</small></div>
         </div>
     </footer>
 

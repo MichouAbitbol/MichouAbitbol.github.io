@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Personal travel page of Mattias Ferreira--Filoramo - Work in Progress" />
+    <meta name="author" content="Mattias Ferreira--Filoramo" />
+    <title>Mattias Ferreira--Filoramo | Travels - Coming Soon</title>
+    
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+    
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root { --nav-height: 80px; }
+        body { 
+            font-family: "Lato", sans-serif; 
+            color: #2c3e50; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar { 
+            background-color: #2c3e50; 
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        /* Ouverture du volet déroulant au survol sur le nom en haut à gauche */
+        .navbar .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+        /* Suppression du petit triangle à côté du nom */
+        .navbar-brand.dropdown-toggle::after {
+            display: none !important;
+        }
+        .dropdown-menu {
+            text-transform: none;
+            font-weight: 400;
+        }
+        .masthead-full { 
+            padding-top: calc(var(--nav-height) + 4rem); 
+            padding-bottom: 6rem; 
+            background-color: #1abc9c; 
+            color: white; 
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+        .divider-custom { 
+            margin: 1.25rem 0 1.5rem; 
+            width: 100%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        .divider-custom-line { 
+            width: 100%; 
+            max-width: 7rem; 
+            height: 0.25rem; 
+            background-color: white; 
+            border-radius: 1rem; 
+        }
+        .divider-custom-icon { color: white; font-size: 2rem; margin: 0 1rem; }
+        footer { background-color: #2c3e50; color: white; padding: 2rem 0; }
+        .copyright { background-color: #1a252f; }
+    </style>
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <!-- Nom en haut à gauche avec menu déroulant au survol -->
+            <div class="dropdown">
+                <a class="navbar-brand text-white dropdown-toggle me-0" href="index.html" id="nameDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Mattias Ferreira--Filoramo
+                </a>
+                <ul class="dropdown-menu shadow" aria-labelledby="nameDropdown">
+                    <li><a class="dropdown-item" href="index.html"><i class="fas fa-square-root-variable me-2 text-primary"></i> Mathematics Page</a></li>
+                    <li><a class="dropdown-item active" href="travels.html"><i class="fas fa-plane me-2 text-success"></i> Travels Page</a></li>
+                </ul>
+            </div>
+
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                Menu <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Lien direct pour revenir à la page principale -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded text-white" href="index.html">
+                            <i class="fas fa-arrow-left me-1"></i> Back to Academic Site
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ecran principal / Work in Progress -->
+    <header class="masthead-full text-center">
+        <div class="container d-flex align-items-center flex-column">
+            
+            <div class="mb-4">
+                <i class="fas fa-compass fa-5x"></i>
+            </div>
+
+            <h1 class="masthead-heading text-uppercase mb-0">Work in Progress</h1>
+            
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-tools"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            
+            <p class="masthead-subheading font-weight-light fs-4 mb-4">
+                This personal travel log is currently under construction.
+            </p>
+            <p class="lead text-white-50 max-width-600 mb-4">
+                Photos, travel notes, and personal memories will be available here soon!
+            </p>
+
+            <a class="btn btn-outline-light btn-lg mt-3" href="index.html">
+                <i class="fas fa-home me-2"></i> Return to Main Page
+            </a>
+            
+        </div>
+    </header>
+
+    <!-- Footer -->
+    <footer>
+        <div class="copyright py-3 text-center text-white">
+            <div class="container"><small>© 2026 Mattias Ferreira--Filoramo | Personal Website</small></div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
